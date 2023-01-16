@@ -439,11 +439,17 @@ button {
   font-family: MullerRegular;
   font-size: 48px;
 }
+.guests__accordion-block {
+  color: var(--white);
+}
 .guests__accordion-item:not(:first-child) {
   margin-top: -1px;
 }
-.guests__accordion-title {
+.guests__accordion-item .guests__accordion-title {
   color: var(--white);
+  background-color: transparent;
+  font-family: MullerMedium;
+  font-size: 20px;
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
@@ -463,8 +469,91 @@ button {
 .guests__accordion-item .guests__accordion-title:hover .guests__accordion-icon path {
   stroke: var(--primary_light);
 }
+.guests__accordion-item .guests__accordion-item-links {
+  margin: 0;
+  padding:0;
+}
+.guests__accordion-item-links div {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--text_gray);
+}
 
 .guests__accordion-icon {
   display: block;
   flex-shrink: 0;
+  transition: transform .5s;
+}
+.ac .ac-trigger::after {
+  content: '';
+}
+.ac {
+  margin-top: 0;
+  border: none;
+  background-color: transparent;
+}
+.is-active .guests__accordion-icon {
+  transform: rotate(180deg);
+}
+
+/*playlists*/
+
+.playlists__container {
+  padding: 94px 0;
+  justify-content: space-around;
+  
+}
+.playlists__left-block {
+  flex-direction: column;
+  max-width: 395px;
+}
+.playlists__checkbox-block {
+  flex-direction: column;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--light_color);
+}
+
+.custom-checkbox[type=radio] {
+  display: none;
+}
+.custom-checkbox, .custom-checkbox-label {
+  margin-bottom: 5px;
+}
+.custom-checkbox-label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+	padding-left: 25px;
+	margin-right: 0;
+	line-height: 18px;
+	user-select: none;
+}
+.custom-checkbox-label::before {
+  content: "";
+	display: inline-block;
+	width: 17px;
+	height: 18px;
+	position: absolute;
+	left: 0;
+	bottom: 1px;
+  border: 1px solid var(--text_gray);
+  border-radius: 50%;
+}
+.custom-checkbox[type=radio]:checked + .custom-checkbox-label::before {
+  border: 4px solid var(--primary);
+}
+
+.playlists__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+.playlist__card-info {
+  padding: 16px;
+}
+.playlist__card-title {
+  font-family: MullerMedium;
+}
+.playlist__card-text {
+  font-size: 12px;
+  color: var(--text_gray);
 }

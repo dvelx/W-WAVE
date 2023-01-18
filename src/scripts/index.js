@@ -9,5 +9,10 @@ const swiperAboutUs = new Swiper('.about-us__swiper', {
   slidesPercolumn: 1,
   autoplay: {
     delay: 6000,
-  }
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  FollowFinger: false,
 })

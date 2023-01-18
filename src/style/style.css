@@ -448,7 +448,9 @@ button {
 }
 .guests__accordion-block {
   color: var(--white);
+  justify-content: space-between;
 }
+
 .guests__accordion-item:not(:first-child) {
   margin-top: -1px;
 }
@@ -504,6 +506,18 @@ button {
 }
 .is-active .guests__accordion-icon {
   transform: rotate(180deg);
+}
+.guests__accordion {
+  width: 65%;
+}
+.guests__accordion-content {
+  width: 30%;
+}
+.guests__accordion-content-btn {
+  border-color: var(--primary);
+  color: var(--primary);
+  font-family: MullerMedium;
+  padding: 12px 19.5px;
 }
 
 /*playlists*/
@@ -651,6 +665,7 @@ button {
 
 .about-us {
   background-color: var(--black);
+  
 }
 .about-us-container {
   padding: 94px 0;
@@ -658,6 +673,7 @@ button {
   background-repeat: no-repeat;
   background-position: top 94px right 0;
   color: var(--white);
+  position: relative;
 }
 .about-us__header {
   width: 59%;
@@ -680,6 +696,7 @@ button {
 }
 
 .about-us__swiper {
+  position: relative;
   height: 361px;
   margin-bottom: 30px;
 }
@@ -727,6 +744,24 @@ button {
   background-repeat: no-repeat;
   background-size: contain;
   align-items: flex-end;
+}
+.swiper-button-next, .swiper-button-prev {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+}
+.swiper-button-next {
+  right: -70px;
+  top: 555px;
+}
+.swiper-button-prev {
+  left: -70px;
+  top: 565px;
+  transform: rotate(180deg);
+}
+.swiper-button-next::after, .swiper-button-prev::after,
+.swiper-button-next::before, .swiper-button-prev::before {
+  content: '';
 }
 
 .about-us__form-textarea {

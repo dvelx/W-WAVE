@@ -83,7 +83,7 @@ button {
 /* common */
 .container {
   margin: 0 auto;
-  max-width: 1140px;
+  max-width: 1110px;
 }
 .btn {
   border: 2px solid var(--black);
@@ -112,7 +112,10 @@ button {
   font-size: 20px;
 }
 .nav-top__list-item:not(:last-child) {
-  margin-right: 58px;
+  margin-right: 59px;
+}
+.nav-top__list-link:hover {
+  color: var(--primary);
 }
 
 .nav-top__buttons {
@@ -126,7 +129,7 @@ button {
 }
 
 .nav-top__buttons-sign {
-  padding: 12px 32.5px;
+  padding: 9px 30.5px;
   border-radius: 77px;
   font-family: MullerMedium;
   font-size: 16px;
@@ -141,7 +144,7 @@ button {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 5px 0;
   position: relative;
 }
 
@@ -151,6 +154,9 @@ button {
 }
 .nav-bottom__list-item:not(:last-child) {
   margin-right: 52px;
+}
+.nav-bottom__list-link:hover {
+  color: var(--primary);
 }
 
 .nav-bottom__buttons {
@@ -198,7 +204,7 @@ button {
 
 .hero {
   background-color: var(--white);
-  padding: 30px 0 40px 0;
+  padding: 28px 0 40px 0;
 }
 .hero-main {
   display: flex;
@@ -212,14 +218,14 @@ button {
 .hero-main__title {
   font-family: MullerBold;
   font-size: 60px;
-  padding-top: 100px;
-  padding-bottom: 15px;
+  padding-top: 57px;
+  padding-bottom: 10px;
 }
 .hero-main__title span {
   font-family: MullerLightItalic;
 }
 .hero-main__text {
-  width: 82%;
+  width: 84%;
   line-height: 24px;
   padding-bottom: 45px;
 }
@@ -228,7 +234,7 @@ button {
   background-color: var(--primary);
   border-color: var(--primary);
   color: var(--white);
-  padding: 25px 54px;
+  padding: 22px 52px;
   font-family: MullerMedium;
   font-size: 20px;
 }
@@ -240,19 +246,19 @@ button {
 /*podcast*/
 
 .podcast__header {
-  padding: 100px 0 0 0;
+  padding: 87px 0 0 0;
 }
 
 .podcast__header-text {
   font-size: 48px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .podcast__cards-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-bottom: 60px;
+  gap: 26px;
+  margin-bottom: 53px;
 }
 .podcast__item {
   position: relative;
@@ -272,7 +278,7 @@ button {
 }
 .podcast__item-image img{
   height: 140px;
-  width: 112px;
+  width: 140px;
 }
 .podcast__item-data {
   width: 100%;
@@ -321,7 +327,7 @@ button {
   color: var(--primary);
   font-family: MullerMedium;
   font-size: 20px;
-  padding: 25px 54px;
+  padding: 22px 52px;
 }
 
 /*issues*/
@@ -330,24 +336,27 @@ button {
   background-color: var(--white);
 }
 .issues-container {
-  padding: 94px 0;
+  padding: 90px 0 94px 0;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  gap: 20px;
+  gap: 7px;
 }
-
+.issues__right-block {
+  max-height: 567px;
+}
 .issues__header {
   font-size: 48px;
+  margin-bottom: 31px;
 }
 .issues__left-block {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 .issues__left-block-content {
   display: flex;
+  flex-direction: column;
   height: 100%;
-  flex-wrap: wrap;
-  align-content: space-between;
+  justify-content: space-between;
 }
 
 .choices {
@@ -392,7 +401,20 @@ button {
 
 .issues__buttons-block {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+}
+.issues__left-image {
+  width: 65px;
+  height: 89px;
+  margin-bottom: 20px;
+}
+.issues__button {
+  padding: 12px 56px;
+  max-width: 160px;
+  margin-bottom: 4px;
+}
+.issues__buttons-text {
+  line-height: 26px;
 }
 
 .issues__list {
@@ -404,11 +426,15 @@ button {
 .issues__item {
   border: 1px solid var(--light_color);
 }
+.issues__item-image img {
+  width: 100%;
+}
 
 .issues__item-text {
-  padding: 20px 40px;
+  padding: 15px 16px;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .issues__item-header {
@@ -422,9 +448,6 @@ button {
   margin-bottom: 20px;
 }
 
-.issues__item-link {
-  
-}
 
 /*guests*/
 
@@ -432,19 +455,26 @@ button {
   background-color: var(--black);
 }
 .guests-container {
-  padding: 94px 0;
+  padding: 90px 0 79px 0;
   color: var(--white);
 }
 .guests__header {
   font-family: MullerRegular;
   font-size: 48px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+.guests__description {
+  width: 70%;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 35px;
 }
 .guests__description span {
   display: block;
   color: var(--text_gray);
   font-family: MullerBold;
   font-size: 20px;
+  margin-bottom: 10px;
 }
 .guests__accordion-block {
   color: var(--white);
@@ -483,7 +513,7 @@ button {
   padding:0;
 }
 .guests__accordion-item-links ul {
-  padding: 30px 0;
+  padding: 28px 0 16px 0;
   border-bottom: 1px solid var(--text_gray);
   columns: 4;
 }
@@ -508,16 +538,37 @@ button {
   transform: rotate(180deg);
 }
 .guests__accordion {
-  width: 65%;
+  width: 66%;
 }
 .guests__accordion-content {
-  width: 30%;
+  width: 32%;
+  padding-top: 18px;
+  padding-left: 5px;
+}
+.guest__accordion-content-image {
+  margin-bottom: 5px;
+}
+.guests__accordion-content-social {
+  margin-bottom: 8px;
+}
+.guests__accordion-content-social svg:not(:last-child) {
+  margin-right: 26px;
+}
+.guests__accordion-content-title {
+  font-family: MullerMedium;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+.guests__accordion-content-text {
+  color: var(--text_gray);
+  line-height: 29px;
+  margin-bottom: 29px;
 }
 .guests__accordion-content-btn {
   border-color: var(--primary);
   color: var(--primary);
   font-family: MullerMedium;
-  padding: 12px 19.5px;
+  padding: 9px 17.5px;
 }
 
 /*playlists*/
